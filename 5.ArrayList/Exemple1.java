@@ -3,32 +3,33 @@ import java.util.ArrayList;
 public class Exemple1 {
 
     public static void main(String[] args) {
-        ArrayList<String> nomsAlumnes;
-        nomsAlumnes = new ArrayList<>();
+        ArrayList<String> nombresAlumnos = new ArrayList<>();
 
-        nomsAlumnes.add("Andreu");
-        nomsAlumnes.add("Maria");
-        nomsAlumnes.add("Josep");
+        nombresAlumnos.add("Andreu");
+        nombresAlumnos.add("Maria");
+        nombresAlumnos.add("Josep");
 
-        nomsAlumnes.add(0, "Helena");
+        nombresAlumnos.add(0, "Helena");
 
-        nomsAlumnes.set(0, "Geni"); // Sobre escriu. Update
+        nombresAlumnos.set(0, "Geni"); // Sobreescribe - Actualizacion
 
-        nomsAlumnes.remove("Geni"); // Delete
-        mostrarElementsArrayList(nomsAlumnes);
+        nombresAlumnos.remove("Geni"); // Eliminar
+        mostrarElementosArrayList(nombresAlumnos);
         System.out.println("----");
 
     }
 
-    private static void mostrarElementsArrayList(ArrayList<String> nomsAlumnes) {
-        for (int i = 0; i < nomsAlumnes.size(); i++) {
-            System.out.println(i + nomsAlumnes.get(i));
+    private static void mostrarElementosArrayList(ArrayList<String> nombresAlumnos) {
+        // Iteración usando índices
+        for (int i = 0; i < nombresAlumnos.size(); i++) {
+            System.out.println(i + ": " + nombresAlumnos.get(i));
         }
 
-        System.out.println("For-each");
+        System.out.println("For-each:");
 
-        for (String nom : nomsAlumnes) {
-            System.out.println(nom);
+        // Iteracion usando un bucle for-each
+        for (String nombre : nombresAlumnos) {
+            System.out.println(nombre);
         }
     }
 }
